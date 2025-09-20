@@ -33,7 +33,7 @@ export default defineConfig({
       image: {
     service: passthroughImageService()
   },
-    site: "https://blog.cmc.us.kg",
+    site: "https://blog.jvav.qzz.io",
     base: "/",
     trailingSlash: "always",
     output: "static",
