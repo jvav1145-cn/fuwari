@@ -1,0 +1,7 @@
+{
+  "useMarkdownLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "posts",
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "img"
+}
