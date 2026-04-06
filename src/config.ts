@@ -49,11 +49,6 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://cloud.umami.is/share/EXN8CwUWW5kgnk9r", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
-		{
-			name: "状态",
-			url: "https://state.jvavhub.top/status/state", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
 	],
 };
 
