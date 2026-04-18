@@ -25,3 +25,29 @@ cloudflare:
 
 saas.sin.fan
 ![](../img/record.webp)
+
+# 常用语法
+## github仓库卡片
+```
+::github{repo="jvav1145-cn/fuwari"}
+```
+效果
+::github{repo="jvav1145-cn/fuwari"}
+
+## 便签组件
+1.note
+```
+:::NOTE
+
+test
+
+:::
+```
+效果
+:::NOTE
+
+test
+
+:::
+
+TIP、IMPORTANT、WARNING、CAUTION同理

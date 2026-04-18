@@ -46,7 +46,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		{
 			name: "统计",
-			url: "https://cloud.umami.is/share/EXN8CwUWW5kgnk9r", // Internal links should not include the base path, as it is automatically added
+			url: "https://umami.jvavhub.top/share/2VVSLZTQFJ7155Uv", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
