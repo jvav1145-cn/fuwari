@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+
+const friends = [
+	{
+		name: "Cloudflare",
+		desc: "本站使用的 CDN | 托管平台",
+		url: "https://www.cloudflare-cn.com/",
+		avatar: "https://www.cloudflare-cn.com/favicon.ico",
+	},
+	{
+		name: "GitHub",
+		desc: "全球代码托管平台",
+		url: "https://github.com",
+		avatar: "https://github.githubassets.com/favicons/favicon.svg",
+	},
+];
+---
+
+<MainGridLayout title="友情链接" description="我的朋友们">
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-7 py-6 relative w-full text-black dark:text-white">
+            
+            <div class="mb-6">
+                <h1 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                    <Icon name="fa6-solid:user-group" class="text-[var(--primary)] w-6 h-6" />
+                    友情链接
+                </h1>
+                <p class="text-base opacity-90 border-l-4 border-[var(--primary)] pl-3">
+                    海内存知己，天涯若比邻
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {friends.map((friend) => (
+                    <a 
+                        href={friend.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="group flex items-center p-3 transition-all duration-300 rounded-[var(--radius-large)] bg-[var(--card-bg)] border border-[var(--line-divider)] hover:border-[var(--primary)] hover:-translate-y-0.5 hover:shadow-md h-[72px]"
+                    >
+                        <img 
+                            src={friend.avatar} 
+                            alt={friend.name} 
+                            class="w-12 h-12 rounded-lg object-cover border border-[var(--line-divider)] transition-transform duration-500 group-hover:scale-105 shrink-0" 
+                            onerror="this.src='/favicon/apple-touch-icon.png'"
+                            loading="lazy"
+                        />
+                        
+                        <div class="flex flex-col justify-center overflow-hidden ml-3">
+                            <div class="text-base font-bold truncate group-hover:text-[var(--primary)] transition-colors">
+                                {friend.name}
+                            </div>
+                            <div class="text-xs opacity-70 truncate mt-0.5">
+                                {friend.desc}
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+
+        </div>
+    </div>
+</MainGridLayout>
+
+<style>
+    /* 极致黑白配色方案 */
+    :global(.dark) .card-base {
+        color: #ffffff !important;
+    }
+    :global(html:not(.dark)) .card-base {
+        color: #000000 !important;
+    }
+</style>
