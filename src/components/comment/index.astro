@@ -7,17 +7,8 @@ interface Props {
 	post: CollectionEntry<"posts">;
 }
 
-const { id, data, slug } = Astro.props.post;
-
-const path = `/posts/${slug}`;
-const url = `${Astro.site?.href}${path}`;
-
-let commentService = "";
-if (commentConfig?.twikoo) {
-	commentService = "twikoo";
-}
+const hasTwikoo = !!commentConfig?.twikoo;
 ---
 <div class="card-base p-6 mb-4">
-  {commentService === 'twikoo' && <Twikoo path={path} />}
-  {commentService === '' && null}
+  {hasTwikoo && <Twikoo />}
 </div>
