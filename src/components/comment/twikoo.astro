@@ -1,0 +1,19 @@
+---
+import { commentConfig } from "@/config";
+
+interface Props {
+	path: string;
+}
+
+const config = {
+	...commentConfig.twikoo,
+	el: "#tcomment",
+	path: Astro.props.path,
+};
+---
+
+<div id="tcomment"></div>
+<script is:inline src="https://registry.npmmirror.com/twikoo/1.7.7/files/dist/twikoo.all.min.js"></script>
+<script is:inline define:vars={{ config }}>
+  twikoo.init(config)
+</script>
